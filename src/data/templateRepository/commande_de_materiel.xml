@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<publicationTemplate>
+    <name>Commande de matériel</name>
+    <description>Formulaire de commande de matériel</description>
+    <directoryUsage>false</directoryUsage>
+    <visible>true</visible>
+    <locked>false</locked>
+    <dataEncrypted>false</dataEncrypted>
+    <applications>
+        <application>formsOnline</application>
+    </applications>
+    <viewFileName>commande_de_materiel/view.xml</viewFileName>
+    <updateFileName>commande_de_materiel/update.xml</updateFileName>
+    <dataFileName>commande_de_materiel/data.xml</dataFileName>
+    <viewTypeFile></viewTypeFile>
+    <updateTypeFile></updateTypeFile>
+    <searchResultFileName>commande_de_materiel/searchresult.xml</searchResultFileName>
+</publicationTemplate>

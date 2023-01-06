@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<publicationTemplate>
+    <name>Réservation Salle</name>
+    <description>Formulaire de réservation d'une salle </description>
+    <directoryUsage>false</directoryUsage>
+    <visible>true</visible>
+    <locked>false</locked>
+    <dataEncrypted>false</dataEncrypted>
+    <applications>
+        <application>formsOnline</application>
+    </applications>
+    <viewFileName>reservation_salle/view.xml</viewFileName>
+    <updateFileName>reservation_salle/update.xml</updateFileName>
+    <dataFileName>reservation_salle/data.xml</dataFileName>
+    <viewTypeFile></viewTypeFile>
+    <updateTypeFile></updateTypeFile>
+    <searchResultFileName>reservation_salle/searchresult.xml</searchResultFileName>
+</publicationTemplate>

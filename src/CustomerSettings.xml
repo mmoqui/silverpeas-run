@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<silverpeas-settings product="Custom">
+
+  <fileset root="${SILVERPEAS_HOME}/properties/org/silverpeas">
+
+    <configfile name="notificationManager/settings/notificationManagerSettings.properties">
+        <parameter key="notification.source.spaceLabel">false</parameter>
+        <parameter key="notification.source.componentLabel">false</parameter>
+        <parameter key="cronDelayedNotificationSending">*/2 * * * *</parameter>
+    </configfile>
+
+    <configfile name="calendar/settings/calendar.properties">
+    <!--
+        <parameter key="calendar.synchronization.cron">*/2 * * * *</parameter>
+    -->
+      <parameter key="calendar.import.ics.file.replace.before.process"><![CDATA[CREATED:0000/CREATED:1970]]></parameter>
+    </configfile>
+  
+  <!--
+    <configfile name="silverstatistics/SilverStatistics.properties">
+      <parameter key="scheduledGetStatSizeTimeStamp">*/15 * * * *</parameter>
+      <parameter key="scheduledGetStatVolumeTimeStamp">*/15 * * * *</parameter>
+      <parameter key="scheduledCumulStatTimeStamp">*/30 * * * *</parameter>
+    </configfile>
+  -->
+
+    <configfile name="chat/settings/chat.properties">
+      <parameter key="chat.enable">true</parameter>
+      <parameter key="chat.client.spid">conversejs</parameter>
+      <parameter key="chat.servers.ice">THE SERVER ICE IP</parameter>
+      <parameter key="chat.servers.xmpp">http://im.silverpeas.net:5280</parameter>
+      <parameter key="chat.servers.xmpp.safe">true</parameter>
+      <parameter key="chat.client.conversejs.reactionTo.enabled">true</parameter>
+      <parameter key="chat.client.conversejs.visio.enabled">true</parameter>
+      <parameter key="chat.client.conversejs.visio.domainServer">meet.silverpeas.com</parameter>
+      <parameter key="chat.client.conversejs.visio.jwt">THE JWT VISIO TOKEN</parameter>
+      <parameter key="chat.client.conversejs.screencast.enabled">true</parameter>
+      <parameter key="chat.xmpp.httpBind">/http-bind/</parameter>
+      <parameter key="chat.xmpp.wsBind">/ws/</parameter>
+      <parameter key="chat.xmpp.rest">/api/</parameter>
+      <parameter key="chat.xmpp.restKey">THE CHAT REST API KEY</parameter>
+      <parameter key="chat.xmpp.domain.0">im.silverpeas.net</parameter>
+    </configfile>
+
+    <configfile name="general.properties">
+      <parameter key="web.resource.js.get.minified.enabled">false</parameter>
+      <parameter key="web.resource.css.get.minified.enabled">false</parameter>
+    </configfile>
+
+    <configfile name="util/security.properties">
+        <parameter key="security.web.protection.injection.content.scripts">https://apis.google.com https://www.silverpeas.com</parameter>
+        <parameter key="security.web.protection.domain.allowed"></parameter>
+    </configfile>
+
+    <configfile name="util/uploads/uploadSettings.properties">
+      <parameter key="MaximumFileSize">1610612736</parameter>
+    </configfile>
+
+    <!--
+    <configfile name="connecteurJDBC/settings/dataSources.properties">
+      <parameter key="dataSource.count">2</parameter>
+      <parameter key="dataSource.1.name">java:/datasources/insee</parameter>
+      <parameter key="dataSource.1.description">insee for ConnectorJDBC</parameter>
+    </configfile>
+    -->
+
+    <configfile name="lookAndFeel/generalLook.properties">
+      <parameter key="loginPage.domainId.default">0</parameter>
+      <!--
+      <parameter key="login.sso.enabled">true</parameter>
+      -->
+      <!-- Anonymous auto connection 
+      <parameter key="anonymousId">2934</parameter>
+      -->
+    </configfile>
+
+    <configfile name="util/viewGenerator/settings/Aurora.properties">
+      <parameter key="Shortcut.home.1.Url">http://localhost:8000/silverpeas/Component/kmelia1</parameter>
+      <parameter key="Shortcut.home.1.AltText">Documentation</parameter>
+      <parameter key="Shortcut.home.2.Url">http://localhost:8000/silverpeas/Component/gallery2</parameter>
+      <parameter key="Shortcut.home.2.AltText">M\u00e9diath\u00e8que</parameter>
+      <parameter key="Shortcut.home.4.Url">http://localhost:8000/silverpeas/Component/formsOnline4</parameter>
+      <parameter key="Shortcut.home.4.AltText">Formulaires</parameter>
+      <parameter key="Shortcut.home.5.Url">http://localhost:8000/silverpeas/Component/almanach3</parameter>
+      <parameter key="Shortcut.home.5.AltText">Agenda partag\u00e9</parameter>
+      <parameter key="Shortcut.home.6.Url">http://localhost:8000/silverpeas/Component/suggestionBox5</parameter>
+      <parameter key="Shortcut.home.6.AltText">Boite \u00e0 id\u00e9e</parameter>
+    </configfile>
+
+    <configfile name="authentication/settings/authenticationSettings.properties">
+      <parameter key="newRegistrationEnabled">true</parameter>
+      <parameter key="changePwdFromLoginPageActive">true</parameter>
+      <!--
+      <parameter key="userMustChangePasswordOnFirstLogin">true</parameter>
+      <parameter key="sso.authentication.domainId">1</parameter>
+      -->
+    </configfile>
+
+    <configfile name="password/settings/password.properties">
+      <parameter key="password.rule.minLength">4</parameter>
+      <parameter key="password.rule.blankForbidden">false</parameter>
+      <!--
+      <parameter key="password.rule.sequentialForbidden">false</parameter>
+      <parameter key="password.rule.atLeastXUppercase">false</parameter>
+      <parameter key="password.rule.atLeastXUppercase.X">3</parameter>
+      <parameter key="password.rule.atLeastXUppercase.combined">false</parameter>
+      <parameter key="password.rule.atLeastXLowercase">false</parameter>
+      <parameter key="password.rule.atLeastXLowercase.X">2</parameter>
+      <parameter key="password.rule.atLeastXLowercase.combined">false</parameter>
+      <parameter key="password.rule.atLeastXDigit">false</parameter>
+      <parameter key="password.rule.atLeastXDigit.X">1</parameter>
+      <parameter key="password.rule.atLeastXDigit.combined">false</parameter>
+      <parameter key="password.rule.atLeastXSpecialChar">false</parameter>
+      <parameter key="password.rule.atLeastXSpecialChar.X">2</parameter>
+      <parameter key="password.rule.atLeastXSpecialChar.combined">false</parameter>
+      <parameter key="password.combination.nbMatchingRules">3</parameter>
+      -->
+    </configfile>
+
+    <configfile name="jobDomainPeas/settings/jobDomainPeasSettings.properties">
+      <parameter key="quota.domain.users.activated">false</parameter>
+    </configfile>
+
+    <configfile name="jobStartPagePeas/settings/jobStartPagePeasSettings.properties">
+      <parameter key="quota.space.components.activated">false</parameter>
+    </configfile>
+
+    <configfile name="kmelia/settings/kmeliaSettings.properties">
+      <parameter key="kmelia.export.formats.active">zip pdf odt doc</parameter>
+      <parameter key="kmelia.stats.enable">true</parameter>
+    </configfile>
+
+    <configfile name="util/attachment/Attachment.properties">
+      <parameter key="attachment.data.fromMetadata">true</parameter>
+      <parameter key="attachmentsAsContent.component.names">kmelia,quickinfo,almanach,userCalendar,questionReply,suggestionBox,forums,projectManager,resourcesManager</parameter>
+      <parameter key="jcr.datastore.garbage.collector.delay">1</parameter>
+    </configfile>
+
+    <configfile name="mailinglist/notification.properties">
+      <parameter key="mail.server.host">IMAP SERVER HOST</parameter>
+      <parameter key="mail.server.login">IMAP USER LOGIN</parameter>
+      <parameter key="mail.server.password">IMAP PASSWORD</parameter>
+    </configfile>
+
+    <configfile name="peasCore/SessionManager.properties">
+      <parameter key="userSessionTimeout">60</parameter>
+    </configfile>
+  
+
+    <!--
+    <configfile name="domains/domainSCIM.properties">
+      <parameter key="push.silverpeas.authorized.admin.ids">2892</parameter>
+    </configfile>
+
+    <configfile name="sso/azure.properties">
+	  <parameter key="azure.silverpeas.client.id">AZURE CLIENT ID</parameter>
+      <parameter key="azure.silverpeas.client.secret">AZURE CLIENT TOKEN</parameter>
+      <parameter key="azure.silverpeas.client.tenant.name">AZURE CLIENT TENANT</parameter>
+      <parameter key="azure.silverpeas.domain.id">3</parameter>
+    </configfile>
+    -->
+
+    <!--
+    <configfile name="mydb/settings/dataSources.properties">
+      <parameter key="dataSource.count">4</parameter>
+      <parameter key="dataSource.1.name">java:/datasources/toto</parameter>
+      <parameter key="dataSource.1.description">Database Toto</parameter>
+      <parameter key="dataSource.2.name">java:/datasources/test</parameter>
+      <parameter key="dataSource.2.description">Database Test</parameter>
+      <parameter key="dataSource.3.name">java:/datasources/db_mgic</parameter>
+      <parameter key="dataSource.3.description">Database DBMGI_C</parameter>
+    </configfile>
+    -->
+
+    <configfile name="importExport/settings/mapping.properties">
+        <parameter key="xsdDefaultSystemId">https://o2.silverpeas.net/weblib/exchange/v6/SilverpeasExchange.xsd</parameter>
+    </configfile>
+
+    <!-- Kerberos -->
+    <!--
+    <configfile name="sso/kerberos.properties">
+        <parameter key="kerberos.silverpeas.domain.id">5</parameter>
+    </configfile>
+    -->
+
+  </fileset>
+
+</silverpeas-settings>
