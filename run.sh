@@ -9,23 +9,23 @@ image_version=latest
 name="silverpeas-${image_version}"
 port=8000
 debug=5005
-cmd=""
-opts="-d"
+mount=""
 while [[ $# -gt 0 ]]; do
   key="$1"
   case $key in
-    -h)
+    -h|--help)
       echo "Usage: run.sh -d DATABASE [-n NETWORK] [-p PORT] [-j DEBUGING_PORT]"
-      echo "              [-i IMAGE_VERSION] [-m NAME] [-c CMD]"
+      echo "              [-i IMAGE_VERSION] [-c NAME] [-m HOST_DIR]"
       echo
-      echo "Spawns and runs a Docker container in the background from the Docker image"
-      echo "silverpeas-run IMAGE_VERSION. In order to update Silverpeas in the Docker"
-      echo "container with the code in development, the .m2/repository directory in the host"
-      echo "is mounted in the container. The data of Silverpeas is also mounted on the host"
-      echo "as a Docker volume named silverpeas-data-NAME so it can be reused later by a new"
-      echo "silverpeas-run container."
-      echo "Once running, you can connect to the container by running the following command:"
-      echo "$ docker exec -u silveruser -it NAME /bin/bash"
+      echo "Spawns and runs a Docker container from the Docker image silverpeas-run"
+      echo "IMAGE_VERSION. Once started, you are directly connected into the container so"
+      echo "you can performe some customization before running Silverpeas."
+      echo
+      echo "In order to update Silverpeas in the Docker container with the code in"
+      echo "development, the .m2/repository directory of the host is mounted on the"
+      echo "container. The data of Silverpeas is also mounted on the host as a Docker volume"
+      echo "named silverpeas-data-NAME so it can be reused later by a new silverpeas-run"
+      echo "container."
       echo
       echo "with:"
       echo "   -n NETWORK         The name of the Docker network on which the container has"
@@ -39,11 +39,10 @@ while [[ $# -gt 0 ]]; do
       echo "                      Default is 5005."
       echo "   -i IMAGE_VERSION   The version of the Docker image to instantiate."
       echo "                      Default is latest."
-      echo "   -m NAME            A name to give to the container."
+      echo "   -c NAME            A name to give to the container."
       echo "                      Default is silverpeas-IMAGE_VERSION."
-      echo "   -c CMD             Command to pass to the container instead of the default"
-      echo "                      one. If passed, the stdin and the stdout are linked with"
-      echo "                      the host."
+      echo "   -m HOST_DIR        Mount the /home/silveruser/webapp (where is deployed"
+      echo "                      Silverpeas) on the directory HOST_DIR of the host."
       exit 0
       ;;
     -n)
@@ -71,14 +70,13 @@ while [[ $# -gt 0 ]]; do
       shift # past argument
       shift # past value
       ;;
-    -m)
+    -c)
       name="$2"
       shift # past argument
       shift # past value
       ;;
-    -c)
-      cmd="$2"
-      opts="-it -u silveruser"
+    -m)
+      mount="-v $2:/home/silveruser/webapp"
       shift # past argument
       shift # past value
       ;;
@@ -90,9 +88,9 @@ done
 
 test "Z$database" = "Z" && die "The name of the docker container or service for the database must be set"
 
-docker run ${opts} ${network} -p ${port}:8000 -p ${debug}:5005 \
+docker run -it -u silveruser ${network} -p ${port}:8000 -p ${debug}:5005 ${mount} \
   -v "$HOME"/.m2/repository:/home/silveruser/.m2/repository \
   -v silverpeas-data-${name}:/home/silveruser/silverpeas/data \
   --link ${database}:database \
   --name ${name} \
-  silverpeas-run:${image_version} ${cmd}
+  silverpeas-run:${image_version} /bin/bash

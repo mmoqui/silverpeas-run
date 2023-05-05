@@ -126,7 +126,7 @@ COPY src/domainIcePeas.properties ${SILVERPEAS_HOME}/properties/org/silverpeas/d
 COPY src/autDomainIcePeas.properties ${SILVERPEAS_HOME}/properties/org/silverpeas/authentication/
 
 RUN sed -i -e "s/SILVERPEAS_VERSION/${SILVERPEAS_VERSION}/g" ${SILVERPEAS_HOME}/bin/silverpeas.gradle \
-  && touch "${SILVERPEAS_HOME}"/bin/.install \
+  && mkdir -p /home/silveruser/webapp \
   && chown -R silveruser:silveruser /home/silveruser/
 
 # Set the default working directory
@@ -141,6 +141,3 @@ USER silveruser
 # Silverpeas listens port 8000 by default. 9990 is the Wildfly administrative port and 5005 is the
 # debugging port
 EXPOSE 8000 9990 5005
-
-# What to execute by default when running the container
-CMD ["/home/silveruser/run.sh"]

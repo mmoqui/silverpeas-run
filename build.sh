@@ -13,7 +13,7 @@ version=0
 while [[ $# -gt 0 ]]; do
   key="$1"
   case $key in
-    -h)
+    -h|--help)
       userid=`grep -o "USER_ID=[0-9]\+" Dockerfile | cut -d '=' -f 2`
       groupid=`grep -o "GROUP_ID=[0-9]\+" Dockerfile | cut -d '=' -f 2`
       wildfly=`grep -o "WILDFLY_VERSION=[a-zA-Z0-9.-]\+" Dockerfile | cut -d '=' -f 2`
