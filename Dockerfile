@@ -12,8 +12,8 @@ ARG GROUP_ID=1000
 
 # Default locale of the platform. It can be overriden to build an image for a specific locale other than en_US.UTF-8.
 ARG DEFAULT_LOCALE=fr_FR.UTF-8
-ARG SILVERPEAS_VERSION=6.4-SNAPSHOT
-ARG WILDFLY_VERSION=26.1.2
+ARG SILVERPEAS_VERSION=6.4-build240329
+ARG WILDFLY_VERSION=26.1.3
 ARG JAVA_VERSION=11
 
 #
@@ -113,7 +113,6 @@ COPY src/silverpeas.gradle ${SILVERPEAS_HOME}/bin/
 
 # Copy this container init script that will be run each time the container is ran
 COPY src/inputrc /home/silveruser/.inputrc
-COPY src/run.sh /home/silveruser/
 COPY src/config.properties ${SILVERPEAS_HOME}/configuration/
 COPY src/converter.groovy ${SILVERPEAS_HOME}/configuration/silverpeas/
 COPY src/CustomerSettings.xml ${SILVERPEAS_HOME}/configuration/silverpeas/
@@ -132,6 +131,9 @@ RUN sed -i -e "s/SILVERPEAS_VERSION/${SILVERPEAS_VERSION}/g" ${SILVERPEAS_HOME}/
 # Set the default working directory
 WORKDIR ${SILVERPEAS_HOME}/bin
 USER silveruser
+
+# Volume in which are stored the data of Silverpeas to avoid to be lost at each container upgrade
+VOLUME ["/home/silveruser/silverpeas/data"]
 
 #
 # Expose image entries. By default, when running, the container will set up Silverpeas and Wildfly
