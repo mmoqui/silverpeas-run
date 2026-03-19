@@ -41,6 +41,7 @@ RUN apt-get update \
     openjdk-${JAVA_VERSION}-jdk \
     ffmpeg \
     imagemagick \
+    html2ps \
     ghostscript \
     libreoffice \
     ure \
