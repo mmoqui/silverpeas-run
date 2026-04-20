@@ -1,6 +1,10 @@
 FROM ubuntu:jammy
 
-MAINTAINER Miguel Moquillon "miguel.moquillon@silverpeas.org"
+LABEL org.opencontainers.image.title="Dev-purpose Silverpeas image"
+LABEL org.opencontainers.image.description="Docker image providing a Silverpeas application for development and testing purpose"
+LABEL org.opencontainers.image.vendor="Silverpeas"
+LABEL org.opencontainers.image.authors="Miguel Moquillon <miguel.moquillon@silverpeas.org>"
+LABEL org.opencontainers.image.licenses="AGPLv3"
 
 ENV TERM=xterm
 ENV TZ=Europe/Paris
