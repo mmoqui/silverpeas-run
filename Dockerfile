@@ -1,4 +1,4 @@
-FROM ubuntu:jammy
+FROM ubuntu:noble
 
 LABEL org.opencontainers.image.title="Dev-purpose Silverpeas image"
 LABEL org.opencontainers.image.description="Docker image providing a Silverpeas application for development and testing purpose"
