@@ -1,4 +1,4 @@
-FROM ubuntu:jammy
+FROM ubuntu:noble
 
 MAINTAINER Miguel Moquillon "miguel.moquillon@silverpeas.org"
 
@@ -45,6 +45,7 @@ RUN apt-get update \
     libreoffice \
     ure \
     gpgv \
+  && userdel -r ubuntu \
   && groupadd -g ${GROUP_ID} silveruser \
   && useradd -u ${USER_ID} -g ${GROUP_ID} -G users -d /home/silveruser -s /bin/bash -m silveruser \
   && mkdir /home/silveruser/.m2 \
