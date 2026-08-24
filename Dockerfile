@@ -16,9 +16,9 @@ ARG GROUP_ID=1000
 
 # Default locale of the platform. It can be overriden to build an image for a specific locale other than en_US.UTF-8.
 ARG DEFAULT_LOCALE=fr_FR.UTF-8
-ARG SILVERPEAS_VERSION=6.5-build260726
-ARG WILDFLY_VERSION=34.0.1
-ARG JAVA_VERSION=17
+ARG SILVERPEAS_VERSION=6.5-build260823
+ARG WILDFLY_VERSION=39.0.1
+ARG JAVA_VERSION=21
 
 #
 # Install required and recommended programs for Silverpeas
