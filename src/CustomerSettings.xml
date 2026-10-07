@@ -138,9 +138,9 @@
     </configfile>
 
     <configfile name="mailinglist/notification.properties">
-      <parameter key="mail.server.host">IMAP SERVER HOST</parameter>
-      <parameter key="mail.server.login">IMAP USER LOGIN</parameter>
-      <parameter key="mail.server.password">IMAP PASSWORD</parameter>
+      <parameter key="mail.server.host">mail.silverpeas.io</parameter>
+      <parameter key="mail.server.login">mailinglist@silverpeas.io</parameter>
+      <parameter key="mail.server.password">sasa</parameter>
     </configfile>
 
     <configfile name="peasCore/SessionManager.properties">
