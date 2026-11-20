@@ -6562,7 +6562,6 @@ COPY public.sb_contentmanager_content (silvercontentid, internalcontentid, conte
 7	6	1	0	2020-11-19	2020/11/19	9999/99/99	1
 8	7	1	0	2020-11-19	2020/11/19	9999/99/99	1
 9	8	1	0	2020-11-19	2020/11/19	9999/99/99	1
-10	1	8	0	2020-11-19	0000/00/00	9999/99/99	1
 4	4	1	2002	2020-10-23	2020/10/23	9999/99/99	1
 11	10	1	2002	2020-11-25	2020/11/25	9999/99/99	1
 12	11	4	2002	2020-11-27	2020/11/27	9999/99/99	1
@@ -6585,7 +6584,6 @@ COPY public.sb_contentmanager_instance (instanceid, componentid, containertype, 
 5	kmelia7	containerPDC	kmelia
 6	blog8	containerPDC	blog
 7	almanach9	containerPDC	almanach
-8	webSites11	containerPDC	webSites
 9	pollingStation12	containerPDC	pollingStation
 10	survey13	containerPDC	survey
 11	blog14	containerPDC	blog
@@ -6788,7 +6786,6 @@ COPY public.sb_node_node (nodeid, nodename, nodedescription, nodecreationdate, n
 0	Accueil		2020/11/12	0	/	1	-1	\N	\N	yellowpages10	default	1	fr	-1
 1	Corbeille	Vous trouvez ici les contacts que vous avez supprimé	2020/11/12	0	/0/	2	0	\N	\N	yellowpages10	default	1	fr	-1
 2	Déclassées	Vos contacts inaccessibles se retrouvent ici	2020/11/12	0	/0/	2	0	\N	\N	yellowpages10	default	2	fr	-1
-0	Accueil	La Racine	2020/11/19	0	/	1	-1	\N	Visible	webSites11	default	1	fr	-1
 0	Accueil Catégories	Racine Catégories	2020/12/08	2002	/	1	-1	\N	Visible	blog14	default	1	fr	-1
 1	Accueil Archives	Racine Archives	2020/12/08	2002	/	1	-1	\N	Visible	blog14	default	1	fr	-1
 14	Photographie		2020/12/08	0	0/	1	0	\N	\N	blog14	default	1	fr	-1
@@ -6895,7 +6892,6 @@ COPY public.sb_publication_publi (pubid, infoid, pubname, pubdescription, pubcre
 6	0	Faites vous plaisir en photographiant		2020/11/19	2020/11/19	9999/99/99	0	1				Valid	2020/11/19	kmelia1	0	\N	\N	00:00	23:59	\N	\N	-1	\N	fr	\N
 7	0	Osez-Composer_Apprendre-la-Photo_Laurent-Breillat		2020/11/19	2020/11/19	9999/99/99	0	1	\N			Valid	2020/11/19	kmelia1	0	\N	\N	00:00	23:59	\N	\N	-1	\N	fr	\N
 8	0	Thomas-HAMMOUDI-10-outils-indispensables-pour-votre-projet-photographique		2020/11/19	2020/11/19	9999/99/99	0	1	\N			Valid	2020/11/19	kmelia1	0	\N	\N	00:00	23:59	\N	\N	-1	\N	fr	\N
-9	0	Tartempion		2020/11/19	0000/00/00	9999/99/99	0	0	1		index.html	Valid	2020/11/19	webSites11	0	\N	\N	00:00	23:59	\N	\N	-1	\N	fr	\N
 4	0	Smalltalk Forever	All about this powerful language	2020/10/23	2020/10/23	9999/99/99	2002	1				Valid	2020/11/27	kmelia1	2002	\N	\N	00:00	23:59	\N	\N	-1	\N	en	\N
 10	0	Wrappers to the Rescue		2020/11/25	2020/11/25	9999/99/99	2002	1	\N			Valid	2020/11/27	kmelia1	2002	\N	\N	00:00	23:59	\N	\N	-1	\N	fr	\N
 \.
@@ -6911,7 +6907,6 @@ COPY public.sb_publication_publifather (pubid, nodeid, instanceid, aliasuserid, 
 6	12	kmelia1	\N	\N	0
 7	12	kmelia1	\N	\N	0
 8	12	kmelia1	\N	\N	0
-9	0	webSites11	\N	\N	0
 10	0	kmelia1	\N	\N	0
 11	8	kmelia6	\N	\N	0
 12	8	kmelia6	\N	\N	0
@@ -7115,7 +7110,6 @@ COPY public.sb_stat_access (datestat, userid, peastype, spaceid, componentid, co
 2020-09-15	1	gallery	WA1	gallery2	1
 2020-09-15	1	almanach	WA1	almanach3	2
 2020-12-01	0	kmelia	WA2	kmelia6	1
-2020-12-07	0	webSites	WA2	webSites11	1
 2020-10-30	2004	suggestionBox	WA1	suggestionBox5	2
 2020-11-25	2003	kmelia	WA1	kmelia1	8
 2020-10-30	2002	formsOnline	WA1	formsOnline4	3
@@ -7123,7 +7117,6 @@ COPY public.sb_stat_access (datestat, userid, peastype, spaceid, componentid, co
 2020-11-06	0	kmelia	WA1	kmelia1	1
 2020-11-12	0	kmelia	WA4	kmelia7	1
 2020-11-19	0	kmelia	WA1	kmelia1	2
-2020-11-19	0	webSites	WA2	webSites11	3
 2020-11-23	2002	kmelia	WA1	kmelia1	1
 2020-11-23	0	kmelia	WA1	kmelia1	1
 2020-09-18	2	suggestionBox	WA1	suggestionBox5	4
@@ -8142,7 +8135,6 @@ COPY public.sc_websites_icons (iconsid, iconsname, iconsdescription, iconsaddres
 --
 
 COPY public.sc_websites_site (siteid, sitename, sitedescription, sitepage, sitetype, siteauthor, sitedate, sitestate, instanceid, popup) FROM stdin;
-1	Tartempion		index.html	0	0	2020/11/19	1	webSites11	1
 \.
 
 
@@ -8151,7 +8143,6 @@ COPY public.sc_websites_site (siteid, sitename, sitedescription, sitepage, sitet
 --
 
 COPY public.sc_websites_siteicons (siteid, iconsid) FROM stdin;
-1	1
 \.
 
 
@@ -8268,7 +8259,6 @@ COPY public.st_componentinstance (id, spaceid, name, componentname, description,
 7	4	Documentation	kmelia		0	1	1605197739045	\N	\N	\N	\N	\N	0	0	fr	0
 8	4	Suivi de projets	blog		0	2	1605197757684	\N	\N	\N	\N	\N	0	0	fr	0
 10	4	Contacts clients et prestataires	yellowpages		0	3	1605197859333	\N	\N	\N	\N	\N	0	0	fr	0
-11	2	Site Web Projets	webSites		0	1	1605782124848	\N	\N	\N	\N	\N	0	0	fr	0
 14	1	Blog	blog		2002	3	1607445310737	\N	\N	\N	\N	\N	0	0	fr	0
 4	1	Formulaires en ligne	formsOnline		0	4	1600099862656	1604077079020	\N	\N	0	\N	0	0	fr	0
 5	1	Boîte à Idées	suggestionBox		0	5	1600099912796	1604077103387	\N	\N	0	\N	0	0	fr	0
@@ -10601,8 +10591,6 @@ COPY public.st_instance_data (id, componentid, name, label, value) FROM stdin;
 192	10	displayedInDirectory	Annuaire général	no
 193	10	directAccess	Accès transversal	no
 194	10	xmlTemplate	Formulaire	
-195	11	usePdc	Classification PDC	no
-196	11	sortedTopics	Dossiers/liens ordonnés	yes
 29	1	authorizedFileExtension	Extension(s) autorisée(s)	
 199	13	usePdc	Classification PDC	no
 200	13	useAnonymousMode	Mode anonyme	no
@@ -13254,9 +13242,6 @@ COPY public.st_userrole (id, instanceid, name, rolename, description, isinherite
 32	10		admin		1	\N	\N
 33	10		publisher		1	\N	\N
 34	10		user		1	\N	\N
-35	11		Admin		1	\N	\N
-36	11		Publisher		1	\N	\N
-37	11		Reader		1	\N	\N
 38	12		admin		1	\N	\N
 39	12		publisher		1	\N	\N
 40	12		user		1	\N	\N
@@ -13357,14 +13342,6 @@ COPY public.st_userrole_user_rel (userroleid, userid) FROM stdin;
 33	2006
 34	2008
 34	2009
-35	0
-35	2004
-36	2002
-36	2003
-36	2005
-36	2006
-37	2008
-37	2009
 38	0
 38	2004
 41	0
