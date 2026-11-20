@@ -1,4 +1,4 @@
-FROM ubuntu:noble
+FROM ubuntu:resolute
 
 LABEL org.opencontainers.image.title="Dev-purpose Silverpeas image"
 LABEL org.opencontainers.image.description="Docker image providing a Silverpeas application for development and testing purpose"
@@ -16,7 +16,7 @@ ARG GROUP_ID=1000
 
 # Default locale of the platform. It can be overriden to build an image for a specific locale other than en_US.UTF-8.
 ARG DEFAULT_LOCALE=fr_FR.UTF-8
-ARG SILVERPEAS_VERSION=6.5-build260823
+ARG SILVERPEAS_VERSION=6.5-build261120
 ARG WILDFLY_VERSION=39.0.1
 ARG JAVA_VERSION=21
 
