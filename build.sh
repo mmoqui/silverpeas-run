@@ -92,11 +92,11 @@ done
 # build the Docker image for building some of the Silverpeas projects
 if [[ ${version} -eq 1 ]]; then
   docker build ${user} ${group} ${wildfly_version} ${java_version} ${silverpeas_version} \
-    -t silverpeas-run:${image_version} \
+    -t silverpeas/silverpeas-run:${image_version} \
     .
 else
   docker build ${user} ${group} ${wildfly_version} ${java_version} ${silverpeas_version} \
-    -t silverpeas-run:latest \
+    -t silverpeas/silverpeas-run:latest \
     .
 fi
 

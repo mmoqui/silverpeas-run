@@ -93,4 +93,4 @@ docker run -it -u silveruser ${network} -p ${port}:8000 -p ${debug}:5005 ${mount
   -v silverpeas-data-${name}:/home/silveruser/silverpeas/data \
   --link ${database}:database \
   --name ${name} \
-  silverpeas-run:${image_version} /bin/bash
+  silverpeas/silverpeas-run:${image_version} /bin/bash
